@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.note.Dao.GonggaoDao">
+<!--设置domain类和数据库中表的字段一一对应，注意数据库字段和domain类中的字段名称不致，此处一定要！-->
+    <resultMap id="Gonggao" type="com.note.Model.Gonggao">
+    	<result column="gonggaoId" property="gonggaoId" jdbcType="INTEGER" />
+    	<result column="gonggaoTitle" property="gonggaoTitle" jdbcType="CHAR" />
+    	<result column="gonggaoTime" property="gonggaoTime" jdbcType="CHAR" />
+    	<result column="gonggaoContent" property="gonggaoContent" jdbcType="CHAR" />
+		<result column="gonggaoAuthor" property="gonggaoAuthor" jdbcType="CHAR" />
+		<result column="gonggaoStatus" property="gonggaoStatus" jdbcType="INTEGER" />
+    </resultMap>
+	<!-- 根据公告标题查询数据 !-->
+    <select id="selectGonggaoByTitle"  parameterType="String" resultMap="Gonggao">
+		SELECT * FROM gonggao WHERE gonggaoTitle = #{gonggaoTitle}
+	</select>
+	<insert id="addGonggao" parameterType="com.note.Model.Gonggao" timeout="20" useGeneratedKeys="true" keyProperty="doctorId">
+		INSERT INTO gonggao(gonggaoTitle,gonggaoTime,gonggaoContent,gonggaoAuthor,gonggaoStatus)
+		values(#{gonggaoTitle},#{gonggaoTime},#{gonggaoContent},#{gonggaoAuthor},1)
+	</insert>
+	<select id="getAllGonggao" parameterType="string" resultMap="Gonggao">
+		SELECT * FROM gonggao where gonggaoStatus = 1
+	</select>
+	<update id="updategonggaoStatus" parameterType="com.note.Model.Gonggao">
+		UPDATE gonggao SET gonggaoStatus = 0 WHERE gonggaoId=#{gonggaoId}
+	</update>
+	<select id="getGonggaoById" parameterType="string" resultMap="Gonggao">
+		SELECT * FROM gonggao WHERE gonggaoId = #{gonggaoId}
+	</select>
+</mapper>
+
+

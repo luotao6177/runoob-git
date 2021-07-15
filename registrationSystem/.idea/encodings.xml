@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$/src/main/java/com/note/Controller/DepartmentController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/note/Controller/DoctorController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/note/Controller/RegisterController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/note/Controller/UserController.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/note/Dao/DepartmentDao.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/note/Dao/RegisterDao.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/note/Model/Department.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/note/Model/Doctor.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/note/Service/DepartmentService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/note/Service/RegisterService.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/note/Service/impl/RegisterServiceImpl.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/note/interceptor/LoginInterceptor.java" charset="GBK" />
+  </component>
+</project>
